@@ -5,7 +5,7 @@ const currTime = Number(Math.round(new Date().getTime() / 1000));
 
 module.exports = async function (deployer, network, accounts) {
 
-  const router = "0x2D99ABD9008Dc933ff5c0CD271B88309593aB921";
+  const router = "0x5db0735cf88f85e78ed742215090c465979b5006";
   const autoliq = accounts[1];
   const treasury = accounts[0];
   const riskFree = accounts[3];
@@ -21,7 +21,7 @@ module.exports = async function (deployer, network, accounts) {
 const addLiq = async (tokenInstance, account) => {
 
   const routerInstance = await Router.at(
-    "0x2D99ABD9008Dc933ff5c0CD271B88309593aB921"
+    "0x5db0735cf88f85e78ed742215090c465979b5006"
   );
   
   let supply = await tokenInstance.totalSupply();
